@@ -24,6 +24,13 @@ public class AmazonTestCase {
         driver.findElement(By.cssSelector("#nav-search > form > div.nav-right > div > input")).click();
         //will relocate to previous page
         driver.navigate().back();
+        //find the element and enter keys to be entered again
+        driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("iphone");
+        //find element that will click on the search button
+        driver.findElement(By.cssSelector("#nav-search > form > div.nav-right > div > input")).click();
+       Thread.sleep(4000);
+        //click on Amazon logo to be redirected to homepage
+        driver.findElement(By.xpath("//*[@id=\"nav-logo\"]/a[1]/span[1]")).click();
 
 
 
